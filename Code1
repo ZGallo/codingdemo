@@ -1,0 +1,11 @@
+from math import cos, sin, radians
+
+def triangle_legs(hyp, angle):
+    """Takes a hypotenuse and angle value and returns the length of the 
+        opposite sides of the triangle adjacent to the right angle"""
+    t = [hyp*cos(radians(angle)), hyp*sin(radians(angle))]
+    t.sort()
+    return tuple(t)
+
+#this is trangle_legs(1, 45)
+print(triangle_legs(1, 45))
